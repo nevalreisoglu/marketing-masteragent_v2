@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/", "destination": "/Marketing_Master_Agent.html" }
+    { "source": "/", "destination": "/index.html" }
   ]
 }
