@@ -1,0 +1,231 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "ui_kits/marketing-suite/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Open Sans|Roboto Mono))/i]",
+        "message": "Font not provided by the design system. Available: Open Sans, Roboto Mono."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {},
+    "tokens": [
+      "--atya-green",
+      "--atya-green-100",
+      "--atya-green-600",
+      "--atya-green-tint",
+      "--atya-orange",
+      "--atya-orange-100",
+      "--atya-orange-300",
+      "--atya-orange-600",
+      "--atya-orange-tint",
+      "--atya-slate",
+      "--atya-slate-300",
+      "--atya-slate-500",
+      "--atya-slate-700",
+      "--bg-canvas",
+      "--bg-header",
+      "--bg-sidebar",
+      "--bg-sidebar-active",
+      "--bg-subtle",
+      "--bg-surface",
+      "--border-default",
+      "--border-strong",
+      "--border-subtle",
+      "--danger",
+      "--danger-bg",
+      "--divider",
+      "--fg-heading-accent",
+      "--fg-link",
+      "--fg-on-primary",
+      "--fg1",
+      "--fg2",
+      "--fg3",
+      "--fg4",
+      "--font-mono",
+      "--font-sans",
+      "--fs-2xl",
+      "--fs-3xl",
+      "--fs-base",
+      "--fs-lg",
+      "--fs-md",
+      "--fs-sm",
+      "--fs-xl",
+      "--fs-xs",
+      "--fw-bold",
+      "--fw-medium",
+      "--fw-regular",
+      "--fw-semibold",
+      "--info",
+      "--info-bg",
+      "--lh-loose",
+      "--lh-normal",
+      "--lh-tight",
+      "--node-delivery",
+      "--node-delivery-bg",
+      "--node-event",
+      "--node-event-bg",
+      "--node-timer",
+      "--node-timer-bg",
+      "--radius-lg",
+      "--radius-md",
+      "--radius-pill",
+      "--radius-sm",
+      "--radius-xs",
+      "--shadow-lg",
+      "--shadow-md",
+      "--shadow-sm",
+      "--shadow-xs",
+      "--space-1",
+      "--space-10",
+      "--space-12",
+      "--space-16",
+      "--space-2",
+      "--space-3",
+      "--space-4",
+      "--space-5",
+      "--space-6",
+      "--space-8",
+      "--success",
+      "--success-bg",
+      "--tracking-caps",
+      "--tracking-normal",
+      "--tracking-tight",
+      "--tracking-wide",
+      "--warning",
+      "--warning-bg"
+    ],
+    "tokenKinds": {
+      "--atya-orange": "color",
+      "--atya-orange-600": "color",
+      "--atya-orange-300": "color",
+      "--atya-orange-100": "color",
+      "--atya-orange-tint": "color",
+      "--atya-slate": "color",
+      "--atya-slate-700": "color",
+      "--atya-slate-500": "color",
+      "--atya-slate-300": "color",
+      "--atya-green": "color",
+      "--atya-green-600": "color",
+      "--atya-green-100": "color",
+      "--atya-green-tint": "color",
+      "--bg-canvas": "color",
+      "--bg-surface": "color",
+      "--bg-subtle": "color",
+      "--bg-sidebar": "color",
+      "--bg-sidebar-active": "color",
+      "--bg-header": "color",
+      "--border-default": "color",
+      "--border-strong": "color",
+      "--border-subtle": "color",
+      "--divider": "color",
+      "--fg1": "color",
+      "--fg2": "color",
+      "--fg3": "color",
+      "--fg4": "color",
+      "--fg-on-primary": "color",
+      "--fg-link": "color",
+      "--fg-heading-accent": "color",
+      "--success": "color",
+      "--success-bg": "color",
+      "--warning": "color",
+      "--warning-bg": "color",
+      "--danger": "color",
+      "--danger-bg": "color",
+      "--info": "color",
+      "--info-bg": "color",
+      "--node-delivery": "color",
+      "--node-delivery-bg": "color",
+      "--node-timer": "color",
+      "--node-timer-bg": "color",
+      "--node-event": "color",
+      "--node-event-bg": "color",
+      "--radius-xs": "radius",
+      "--radius-sm": "radius",
+      "--radius-md": "radius",
+      "--radius-lg": "radius",
+      "--radius-pill": "radius",
+      "--shadow-xs": "shadow",
+      "--shadow-sm": "shadow",
+      "--shadow-md": "shadow",
+      "--shadow-lg": "shadow",
+      "--space-1": "spacing",
+      "--space-2": "spacing",
+      "--space-3": "spacing",
+      "--space-4": "spacing",
+      "--space-5": "spacing",
+      "--space-6": "spacing",
+      "--space-8": "spacing",
+      "--space-10": "spacing",
+      "--space-12": "spacing",
+      "--space-16": "spacing",
+      "--font-sans": "font",
+      "--font-mono": "font",
+      "--fs-xs": "spacing",
+      "--fs-sm": "spacing",
+      "--fs-base": "spacing",
+      "--fs-md": "spacing",
+      "--fs-lg": "spacing",
+      "--fs-xl": "spacing",
+      "--fs-2xl": "spacing",
+      "--fs-3xl": "spacing",
+      "--lh-tight": "font",
+      "--lh-normal": "font",
+      "--lh-loose": "font",
+      "--fw-regular": "font",
+      "--fw-medium": "font",
+      "--fw-semibold": "font",
+      "--fw-bold": "font",
+      "--tracking-tight": "font",
+      "--tracking-normal": "font",
+      "--tracking-wide": "font",
+      "--tracking-caps": "font"
+    },
+    "fontFamilies": [
+      "Open Sans",
+      "Roboto Mono"
+    ]
+  }
+}

@@ -1,0 +1,221 @@
+/* ============================================================
+   Atya Marketing Suite — Colors & Type
+   Reverse-engineered from ECM (Atya Customer Management) UI
+   Reference: assets/reference/atya-*.png
+   ============================================================ */
+
+/* ---------- Google Fonts (Open Sans — closest match to the
+   humanist sans used throughout ECM. Flag: swap with exact
+   font file once provided by Atya brand team.) ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap');
+
+:root {
+  /* ----------------------------------------------------------
+     BRAND
+     Atya's logo uses a warm orange accent over a cool slate-gray
+     wordmark. The UI leans on a secondary green for primary
+     actions and headings (legacy ECM pattern).
+     ---------------------------------------------------------- */
+  --atya-orange:        #F7941D;   /* primary brand orange */
+  --atya-orange-600:    #E8830D;
+  --atya-orange-300:    #FFB970;
+  --atya-orange-100:    #FFE6CC;
+  --atya-orange-tint:   #FFF4E6;
+
+  --atya-slate:         #505B79;   /* wordmark gray-slate */
+  --atya-slate-700:     #3E4660;
+  --atya-slate-500:     #6C7A85;
+  --atya-slate-300:     #A6AEBD;
+
+  /* Secondary action color — the ECM "Search", "Save",
+     "Create New Campaign" green */
+  --atya-green:         #62AB47;
+  --atya-green-600:     #4F9138;
+  --atya-green-100:     #E4F2DC;
+  --atya-green-tint:    #F2F9EC;
+
+  /* ----------------------------------------------------------
+     NEUTRALS / SURFACES
+     Light cool background, near-white cards.
+     ---------------------------------------------------------- */
+  --bg-canvas:           #F0F5FB;   /* page / app canvas */
+  --bg-surface:          #FFFFFF;   /* cards, panels, modals */
+  --bg-subtle:           #F8FAFC;   /* list rows, table headers */
+  --bg-sidebar:          #FFFFFF;
+  --bg-sidebar-active:   #EEF3FA;   /* selected nav item */
+  --bg-header:           #FFFFFF;
+
+  /* Line work */
+  --border-default:      #E3E8EF;
+  --border-strong:       #C9D2DE;
+  --border-subtle:       #EEF2F7;
+  --divider:             #E8ECF1;
+
+  /* ----------------------------------------------------------
+     TEXT / FOREGROUND
+     ---------------------------------------------------------- */
+  --fg1:                 #2B3445;   /* primary body/heading */
+  --fg2:                 #505B79;   /* secondary — matches slate */
+  --fg3:                 #7E8A9A;   /* tertiary, meta, captions */
+  --fg4:                 #A6AEBD;   /* disabled, placeholder */
+  --fg-on-primary:       #FFFFFF;
+  --fg-link:             var(--atya-green);
+  --fg-heading-accent:   var(--atya-green);  /* section titles */
+
+  /* ----------------------------------------------------------
+     SEMANTIC
+     ---------------------------------------------------------- */
+  --success:             #62AB47;
+  --success-bg:          #E4F2DC;
+  --warning:             #F7941D;
+  --warning-bg:          #FFE6CC;
+  --danger:              #E5484D;
+  --danger-bg:           #FCEAEA;
+  --info:                #3E8EE8;
+  --info-bg:             #E4EFFB;
+
+  /* Journey Builder node palette
+     (Delivery / Timer / Event — straight from ekran-7) */
+  --node-delivery:       #3E8EE8;
+  --node-delivery-bg:    #E4EFFB;
+  --node-timer:          #F5B82E;
+  --node-timer-bg:       #FFF4D6;
+  --node-event:          #2EC4A0;
+  --node-event-bg:       #DFF6EF;
+
+  /* ----------------------------------------------------------
+     ELEVATION / RADIUS
+     ---------------------------------------------------------- */
+  --radius-xs:           2px;
+  --radius-sm:           4px;
+  --radius-md:           6px;    /* most cards, buttons */
+  --radius-lg:           10px;
+  --radius-pill:         999px;
+
+  --shadow-xs:           0 1px 2px rgba(40, 52, 72, 0.04);
+  --shadow-sm:           0 1px 3px rgba(40, 52, 72, 0.06), 0 1px 2px rgba(40, 52, 72, 0.04);
+  --shadow-md:           0 4px 12px rgba(40, 52, 72, 0.08);
+  --shadow-lg:           0 12px 32px rgba(40, 52, 72, 0.12);
+
+  /* ----------------------------------------------------------
+     SPACING — 4px base
+     ---------------------------------------------------------- */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* ----------------------------------------------------------
+     TYPOGRAPHY
+     ---------------------------------------------------------- */
+  --font-sans: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "Roboto Mono", "SF Mono", Menlo, Consolas, monospace;
+
+  --fs-xs:   11px;
+  --fs-sm:   12px;
+  --fs-base: 13px;   /* ECM body size */
+  --fs-md:   14px;
+  --fs-lg:   16px;
+  --fs-xl:   18px;
+  --fs-2xl:  22px;
+  --fs-3xl:  28px;
+
+  --lh-tight:  1.2;   /* @kind font */
+  --lh-normal: 1.45;  /* @kind font */
+  --lh-loose:  1.6;   /* @kind font */
+
+  --fw-regular: 400;  /* @kind font */
+  --fw-medium:  500;  /* @kind font */
+  --fw-semibold:600;  /* @kind font */
+  --fw-bold:    700;  /* @kind font */
+
+  --tracking-tight:  -0.01em;
+  --tracking-normal: 0;
+  --tracking-wide:   0.04em;
+  --tracking-caps:   0.08em;
+}
+
+/* ============================================================
+   Base element styles — semantic defaults
+   ============================================================ */
+html, body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
+  color: var(--fg1);
+  background: var(--bg-canvas);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, .h1 {
+  font-size: var(--fs-3xl);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-tight);
+  color: var(--fg1);
+  letter-spacing: var(--tracking-tight);
+}
+h2, .h2 {
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-tight);
+  color: var(--fg1);
+}
+h3, .h3 {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-semibold);
+  line-height: 1.3;
+  color: var(--fg-heading-accent);  /* ECM convention: green section title */
+}
+h4, .h4 {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-semibold);
+  line-height: 1.3;
+  color: var(--fg1);
+}
+h5, .h5 {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-semibold);
+  color: var(--fg1);
+}
+h6, .h6 {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caps);
+  color: var(--fg3);
+}
+
+p  { font-size: var(--fs-base); color: var(--fg1); }
+small, .caption {
+  font-size: var(--fs-sm);
+  color: var(--fg3);
+}
+.eyebrow {
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caps);
+  font-weight: var(--fw-semibold);
+  color: var(--fg3);
+}
+code, .mono { font-family: var(--font-mono); font-size: 0.95em; }
+
+a  { color: var(--fg-link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ============================================================
+   Breadcrumb / section label (ECM top strip)
+   ============================================================ */
+.breadcrumb {
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caps);
+  color: var(--fg3);
+  font-weight: var(--fw-semibold);
+}
